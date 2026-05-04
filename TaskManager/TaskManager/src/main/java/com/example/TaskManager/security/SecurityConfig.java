@@ -33,6 +33,7 @@ public class SecurityConfig {
                                 "/assets/**",
                                 "/auth/**"
                         ).permitAll()
+                        .requestMatchers(org.springframework.http.HttpMethod.OPTIONS, "/**").permitAll() // 🔥 ADD THIS
                         .anyRequest().authenticated()
                 )
                 .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class)
