@@ -47,11 +47,7 @@ public class SecurityConfig {
 
         CorsConfiguration config = new CorsConfiguration();
 
-        config.setAllowedOrigins(List.of(
-                "http://localhost:5173",
-                "https://task-management-uz38-1hmi14hhh-dhruvtrigotras-projects.vercel.app"
-        ));
-
+        config.setAllowedOriginPatterns(List.of("*")); // easiest fix
         config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         config.setAllowedHeaders(List.of("*"));
         config.setAllowCredentials(true);
