@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://task-management-production-7015.up.railway.app",
+  baseURL: "https://task-management-production-f762.up.railway.app",
 });
 
 // attach JWT automatically

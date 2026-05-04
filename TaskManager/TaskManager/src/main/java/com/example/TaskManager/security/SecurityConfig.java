@@ -47,7 +47,10 @@ public class SecurityConfig {
 
         CorsConfiguration config = new CorsConfiguration();
 
-        config.setAllowedOriginPatterns(List.of("*")); // easiest fix
+        config.setAllowedOrigins(List.of(
+                "https://task-management-uz38-1hmi14hhh-dhruvtrigotras-projects.vercel.app"
+        ));
+
         config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         config.setAllowedHeaders(List.of("*"));
         config.setAllowCredentials(true);
